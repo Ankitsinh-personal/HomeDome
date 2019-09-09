@@ -1,0 +1,19 @@
+{
+  "name": "homedome",
+  "version": "1.0.0",
+  "description": "HomeDome a Devang Parekh Production for Real Estate Systems",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BravesDevs/HomeDome.git"
+  },
+  "author": "DevangParekh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BravesDevs/HomeDome/issues"
+  },
+  "homepage": "https://github.com/BravesDevs/HomeDome#readme"
+}
