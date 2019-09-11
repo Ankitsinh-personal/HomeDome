@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Register - Brand</title>
+    <title>Register</title>
     <meta name="description" content="HomeDome Properties is one of the state’s most valuable and admired real estate development corporatiuon. HomeDome has shaped new lifestyles with a focus on design excellence, build quality and timely delivery.">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
     <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
     <link rel="stylesheet" href="assets/css/smoothproducts.css">
+
+    <script src="server.js"></script>
+
 </head>
 
 <body>
@@ -52,17 +55,20 @@
                     <p style="font-size: 25px;">HomeDome Corporation</p>
                     <p>See the good in the World</p>
                 </div>
-                <form style="height: 500px;width: 550px;" data-bss-recipient="dc4f1e01eb87995e4356059cee0fbeab">
-                    <div class="form-group"><label for="name">Name</label><input class="form-control item" type="text" id="name"></div>
-                    <div class="form-group"><label for="email">Email</label><input class="form-control item" type="email" id="email"></div>
-                    <div class="form-group"><label for="password">Password</label><input class="form-control item" type="password" id="password"></div><button class="btn btn-primary btn-block" type="submit" onclick="register()">Sign Up</button>
-                    <div class="form-group" style="padding-top: 20px;">
-                        <p>Already a member?&nbsp;<a href="login.html">Login&nbsp;</a>&nbsp;</p>
-                    </div>
-                    <div class="form-group" style="margin-top: 30px;"><button class="btn btn-primary btn-lg text-center border rounded-0" type="button" style="margin-left: 5px;width: 55px;"><i class="fab fa-google" style="font-size: 20px;width: 20px;height: 20px;"></i></button><button class="btn btn-primary btn-lg text-center border rounded-0"
-                            type="button" style="margin-left: 5px;width: 55px;"><i class="fab fa-microsoft" style="font-size: 20px;width: 20px;height: 20px;"></i></button><button class="btn btn-primary btn-lg text-center border rounded-0" type="button" style="margin-left: 5px;width: 55px;"><i class="fab fa-facebook-f" style="font-size: 20px;width: 20px;height: 20px;"></i></button></div>
-                </form>
             </div>
+            <section class="clean-block clean-form dark">
+                <div class="container">
+                    <form action="sign_up" style="height: 480px;width: 500px;" >
+                        <div class="form-group"><label for="name">Name</label><input class="form-control item" type="text" id="name"></div>
+                        <div class="form-group"><label for="password">Password</label><input class="form-control item" type="password" id="password"></div>
+                        <div class="form-group"><label for="email">Email</label><input class="form-control item" type="text" id="email"></div><button class="btn btn-primary btn-block" type="button">Sign Up</button>
+                        <p style="margin-top: 10px;">Already a Member?&nbsp;<a href="login.html">Login</a></p>
+                        <div class="form-group" style="margin-top: 30px;"><button class="btn btn-primary btn-lg text-center border rounded-0" type="button" style="margin-left: 5px;width: 55px;"><i class="fab fa-google" style="font-size: 20px;width: 20px;height: 20px;"></i></button><button class="btn btn-primary btn-lg text-center border rounded-0"
+                                type="button" style="margin-left: 5px;width: 55px;"><i class="fab fa-microsoft" style="font-size: 20px;width: 20px;height: 20px;"></i></button><button class="btn btn-primary btn-lg text-center border rounded-0" type="button"
+                                style="margin-left: 5px;width: 55px;"><i class="fab fa-facebook-f" style="font-size: 20px;width: 20px;height: 20px;"></i></button></div>
+                    </form>
+                </div>
+            </section>
         </section>
     </main>
     <footer class="page-footer dark">
@@ -115,7 +121,7 @@
     </footer>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/smart-forms.min.js"></script>
+   <!-- <script src="assets/js/smart-forms.min.js"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
     <script src="assets/js/smoothproducts.min.js"></script>
     <script src="assets/js/theme.js"></script>

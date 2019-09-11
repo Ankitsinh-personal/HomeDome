@@ -1,19 +1,22 @@
 {
   "name": "homedome",
   "version": "1.0.0",
-  "description": "HomeDome a Devang Parekh Production for Real Estate Systems",
-  "main": "index.js",
+  "description": "HomeDome is Real Estate WebApp of the Devang Parekh Productions",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BravesDevs/HomeDome.git"
-  },
-  "author": "DevangParekh",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/BravesDevs/HomeDome/issues"
-  },
-  "homepage": "https://github.com/BravesDevs/HomeDome#readme"
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongodb": "^2.2.33",
+    "socket.io": "^2.2.0",
+    "nodemon": "1.19.1",
+    "express-session": "1.16.2",
+    "connect-mongo": "3.0.0",
+    "mongoose": "5.6.9"
+  }
 }

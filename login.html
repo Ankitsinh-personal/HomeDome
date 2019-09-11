@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
     <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
     <link rel="stylesheet" href="assets/css/smoothproducts.css">
+
+    <script src="assets\js\server.js"></script>
+
 </head>
 
 <body>
@@ -52,17 +55,21 @@
                     <p style="font-size: 25px;">HomeDome Corporation</p>
                     <p>See the good in the World</p>
                 </div>
-                <form data-bss-recipient="dc4f1e01eb87995e4356059cee0fbeab" style="height: 500px;">
-                    <div class="form-group"><label for="email">Email</label><input class="form-control item" type="email" id="email" required="" pattern="^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$" autofocus=""></div>
-                    <div class="form-group"><label for="password">Password</label><input class="form-control" type="password" id="password" required=""></div>
-                    <div class="form-group">
-                        <div class="form-check"><input class="form-check-input" type="checkbox" id="checkbox"><label class="form-check-label" for="checkbox">Remember me</label></div><a href="#">&nbsp;</a></div><button class="btn btn-primary btn-block" type="submit" onclick="login()">Log In</button>
-                    <div class="form-group" style="padding-top: 30px;">
-                        <p>Not a member?&nbsp;<a href="registration.html">Join here</a></p>
+                <section class="clean-block clean-form dark">
+                    <div class="container">
+                        <form style="width: 500px;height: 435px;">
+                            <div class="form-group"><label for="email">Email</label><input class="form-control item" type="text" id="email"></div>
+                            <div class="form-group"><label for="password">Password</label><input class="form-control" type="password" id="password"></div>
+                            <div class="form-group">
+                                <div class="form-check"><input class="form-check-input" type="checkbox" id="checkbox"><label class="form-check-label" for="checkbox">Remember me</label></div>
+                            </div><button class="btn btn-primary btn-block" id="submit" type="button" onclick="login()">Log In</button>
+                            <p style="margin-top: 10px;">Not a member?&nbsp;<a href="registration.html">Register&nbsp;</a></p>
+                            <div class="form-group" style="margin-top: 30px;"><button class="btn btn-primary btn-lg text-center border rounded-0" type="button" style="margin-left: 5px;width: 55px;"><i class="fab fa-google" style="font-size: 20px;width: 20px;height: 20px;"></i></button><button class="btn btn-primary btn-lg text-center border rounded-0"
+                                    type="button" style="margin-left: 5px;width: 55px;"><i class="fab fa-microsoft" style="font-size: 20px;width: 20px;height: 20px;"></i></button><button class="btn btn-primary btn-lg text-center border rounded-0" type="button"
+                                    style="margin-left: 5px;width: 55px;"><i class="fab fa-facebook-f" style="font-size: 20px;width: 20px;height: 20px;"></i></button></div>
+                        </form>
                     </div>
-                    <div class="form-group" style="margin-top: 30px;"><button class="btn btn-primary btn-lg text-center border rounded-0" type="button" style="margin-left: 5px;width: 55px;"><i class="fab fa-google" style="font-size: 20px;width: 20px;height: 20px;"></i></button><button class="btn btn-primary btn-lg text-center border rounded-0"
-                            type="button" style="margin-left: 5px;width: 55px;"><i class="fab fa-microsoft" style="font-size: 20px;width: 20px;height: 20px;"></i></button><button class="btn btn-primary btn-lg text-center border rounded-0" type="button" style="margin-left: 5px;width: 55px;"><i class="fab fa-facebook-f" style="font-size: 20px;width: 20px;height: 20px;"></i></button></div>
-                </form>
+                </section>
             </div>
         </section>
     </main>
@@ -116,11 +123,26 @@
     </footer>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/smart-forms.min.js"></script>
+    <!--<script src="assets/js/smart-forms.min.js"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
     <script src="assets/js/smoothproducts.min.js"></script>
     <script src="assets/js/theme.js"></script>
     <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"></script>
+
+    <script>
+        var socket=io.connect('http://localhost:4000');
+
+        var username=document.getElementById('email');
+        var password=document.getElementById('password');
+        var submit=document.getElementById('submit');
+
+        submit.addEventListener('click',function(r){
+            //window.alert("Submit button is clicked");
+        });
+
+    </script>
 </body>
 
 </html>
