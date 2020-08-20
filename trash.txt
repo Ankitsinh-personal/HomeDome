@@ -1,51 +1,142 @@
-var express=require("express"); 
-var bodyParser=require("body-parser"); 
 
-const mongoose = require('mongoose'); 
-mongoose.connect('mongodb://localhost:27017/gfg'); 
-var db=mongoose.connection; 
-db.on('error', console.log.bind(console, "connection error")); 
-db.once('open', function(callback){ 
-	console.log("connection succeeded"); 
-}) 
+// const state = 
+// {
+// 	db:null
+// };
 
-var app=express() 
+// const connect=(cb)=>
+// {
+// 	if(state.db)
+// 		cb();
+// 	else
+// 	{
+// 		MongoClient.connect(url,mongoOptions,(err,client)=>{
+// 			if(err)
+// 				cb(err);
+// 			else
+// 			{
+// 				state.db=client.db(dbname);
+// 				cb();
+// 			}
+// 		});
+// 	}
+// }
 
+// var express=require("express"); 
+// var bodyParser=require("body-parser"); 
+// var path=require("path");
+// const mongoose = require('mongoose'); 
+// mongoose.connect('mongodb://localhost:27017/HomeDome'); 
+// var db=mongoose.connection; 
+// db.on('error', console.log.bind(console, "connection error")); 
+// const mongoOptions={useNewUrlParser:true};
+// db.once('open', function(callback){ 
+// 	console.log("connection succeeded"); 
+// }) 
 
-app.use(bodyParser.json()); 
-app.use(express.static('public')); 
-app.use(bodyParser.urlencoded({ 
-	extended: true
-})); 
+// var app=express();
+// app.use(bodyParser.json()); 
+// app.use(express.static('assets'));
+// app.use(bodyParser.urlencoded({ 
+// 	extended: true
+// })); 
+// // app.get('/',(req,res)=>{
+// // 	res.send("Hello World");
+// // })
 
-app.post('/sign_up', function(req,res){ 
-	var name = req.body.name; 
-	var email =req.body.email; 
-	var pass = req.body.password; 
-	var phone =req.body.phone; 
+// app.get('/signup', function(req,res){ 
+// 	res.sendFile(__dirname+'/registration.html');
 
-	var data = { 
-		"name": name, 
-		"email":email, 
-		"password":pass, 
-		"phone":phone 
-	} 
-db.collection('details').insertOne(data,function(err, collection){ 
-		if (err) throw err; 
-		console.log("Record inserted Successfully"); 
+// 	var name = req.body.name; 
+// 	var email =req.body.email; 
+// 	var pass = req.body.password; 
+
+// 	var data={ 
+// 		"name": name, 
+// 		"email":email, 
+//         "password":pass
+// 		} 
+// 	console.log(name1+" "+email1);
+// // db.collection('users').insertOne(data,function(err, collection){ 
+// // 		if (err) throw err; 
+// // 		alert("Record inserted Successfully"); 
 			
-	}); 
+// // 	}); 		
+// 	//res.sendFile(__dirname+'/login.html'); 
+// });
+
+// app.get('/',function(req,res){ 
+// res.set({ 
+// 	'Access-control-Allow-Origin': '*'
+// 	}); 
+//  //res.redirect(__dirname+'index.html');
+//  res.sendFile(__dirname+'/index.html'); 
+// }).listen(3000);
+// console.log("server listening at port 3000"); 
+
+
+
+// const express=require('express');
+// const path=require('path');
+// const mongoose=require('mongoose');
+// const bodyParser=require('body-parser');
+// const expressValidator=require('express-validator');
+// const flash=require('connect-flash');
+// const session=require('express-session');
+
+
+
+
+// var express=require("express"); 
+// var bodyParser=require("body-parser"); 
+
+// const mongoose = require('mongoose'); 
+// mongoose.connect('mongodb://localhost:27017/HomeDome'); 
+// var db=mongoose.connection; 
+// db.on('error', console.log.bind(console, "connection error")); 
+// db.once('open', function(callback){ 
+// 	console.log("connection succeeded"); 
+// }) 
+
+// var app=express() 
+
+// app.use(bodyParser.json()); 
+// app.use(express.static('assets')); 
+// app.use(bodyParser.urlencoded({ 
+// 	extended: true
+// })); 
+
+// app.post('/signup', function(req,res){ 
+// 	// var name = req.body.name; 
+// 	// var email =req.body.email; 
+// 	// var pass = req.body.password; 
+
+// 	var name = "xyz"; 
+// 	var email ="abc@gmail.com"; 
+// 	var pass = "abc"; 
+
+
+// 	var data = { 
+// 		"name": name, 
+// 		"email":email, 
+// 		"password":pass, 
+// 	} 
+// db.collection('users').insertOne(data,function(err, collection){ 
+// 		if (err) throw err; 
+// 		console.log("Record inserted Successfully"); 
+			
+// 	}); 
 		
-	return res.redirect('signup_success.html'); 
-}) 
+// 	return res.sendFile(__dirname+'/login.html'); 
+// }); 
 
 
-app.get('/',function(req,res){ 
-res.set({ 
-	'Access-control-Allow-Origin': '*'
-	}); 
-return res.redirect('index.html'); 
-}).listen(3000) 
+// app.get('/',function(req,res){ 
+// res.set({ 
+// 	'Access-control-Allow-Origin': '*'
+// 	}); 
+// return res.sendFile(__dirname+'/registration.html'); 
+// }).listen(3000) 
 
 
-console.log("server listening at port 3000"); 
+// console.log("server listening at port 3000"); 
